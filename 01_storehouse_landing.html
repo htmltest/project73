@@ -6,13 +6,17 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css">
+        <link rel="stylesheet" href="js/slick/slick.css" />
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/validation/jquery.validate.min.js"></script>
         <script src="js/validation/messages_ru.js"></script>
         <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
         <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -37,6 +41,11 @@
 
                 </header>
 
+                <div class="top-mobile">
+                    <div class="top-mobile-phone">+7 (495) 442-1250</div>
+                    <div class="top-mobile-callback"><a href="#">Перезвоните мне</a></div>
+                </div>
+
                 <!-- bg -->
                 <div class="bg bg-main" style="background-image:url(files/bg-main.jpg)">
                     <!-- main header -->
@@ -48,7 +57,7 @@
 
                         <div class="main-header-form">
                             <div class="timer-title">Осталось</div>
-                            <div class="timer" data-timestamp="2016/12/31 23:59:59">
+                            <div class="timer" data-timestamp="2017/02/28 23:59:59">
                                 <div class="timer-item">
                                     <div class="timer-item-value">0</div>
                                     <div class="timer-item-name">дней</div>
@@ -319,11 +328,44 @@
                             <li><a href="#">Комплектация товара</a></li>
                             <li><a href="#">Упаковка</a></li>
                         </ul>
+
+                        <div class="services-menu-mobile">
+                            <div class="services-menu-mobile-item">
+                                <ul class="services-menu">
+                                    <li><a href="#">Кросс-докинг</a></li>
+                                    <li><a href="#">Экспедирование</a></li>
+                                    <li><a href="#">Ответственное хранение</a></li>
+                                    <li><a href="#">Транспортные услуги</a></li>
+                                </ul>
+                            </div>
+                            <div class="services-menu-mobile-item">
+                                <ul class="services-menu">
+                                    <li><a href="#">Погрузочно- разгрузочные работы</a></li>
+                                    <li><a href="#">Страхование груза</a></li>
+                                    <li><a href="#">Комплектация товара</a></li>
+                                    <li><a href="#">Упаковка</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- order -->
                 <div id="order">
+                    <div class="main-header-form">
+                        <form action="#" method="post">
+                            <div class="form-input"><input type="text" name="name" value="" placeholder="Ваше имя" class="required" /></div>
+                            <div class="form-input"><input type="text" name="phone" value="" placeholder="Телефон " class="required maskPhone" /></div>
+                            <div class="form-input"><input type="text" name="email" value="" placeholder="Электронная почта" class="required email" /></div>
+                            <div class="form-input"><textarea name="message" rows="2" cols="10" placeholder="Опишите тип, объем груза и&nbsp;интересующий вас способ хранения" class="required"></textarea></div>
+                            <div class="main-header-form-text">Для получения полного расчета стоимости услуги хранения вам потребуется <a href="#">скачать анкету (.xls)</a>, заполнить ее и прикрепить к заявке.</div>
+                            <div class="form-file">
+                                <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                <div class="form-file-name"></div>
+                            </div>
+                            <div class="form-submit"><input type="submit" value="Стать клиентом" class="btn-1" /></div>
+                        </form>
+                    </div>
                     <div class="how-form">
                         <form action="#" method="post">
                             <div class="how-form-row">
@@ -449,13 +491,13 @@
                 <div class="main-gallery">
                     <div class="main-gallery-title">Фотографии комплекса</div>
                     <div class="main-gallery-list">
-                        <div class="main-gallery-item"><a href="files/main-gallery-1.jpg" rel="gallery"><img src="files/main-gallery-1.jpg" alt="" /></a></div>
-                        <div class="main-gallery-item"><a href="files/main-gallery-2.jpg" rel="gallery"><img src="files/main-gallery-2.jpg" alt="" /></a></div>
-                        <div class="main-gallery-item"><a href="files/main-gallery-3.jpg" rel="gallery"><img src="files/main-gallery-3.jpg" alt="" /></a></div>
-                        <div class="main-gallery-item"><a href="files/main-gallery-4.jpg" rel="gallery"><img src="files/main-gallery-4.jpg" alt="" /></a></div>
-                        <div class="main-gallery-item"><a href="files/main-gallery-5.jpg" rel="gallery"><img src="files/main-gallery-5.jpg" alt="" /></a></div>
-                        <div class="main-gallery-item"><a href="files/main-gallery-6.jpg" rel="gallery"><img src="files/main-gallery-6.jpg" alt="" /></a></div>
-                        <div class="main-gallery-item"><a href="files/main-gallery-7.jpg" rel="gallery"><img src="files/main-gallery-7.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-1.jpg" rel="gallery" title="Производственная база МТС «Очаково»" data-date="12 марта 2016 года"><img src="files/main-gallery-1.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-2.jpg" rel="gallery" title="86 МЕХАНИЧЕСКИЙ ЗАВОД" data-date="13 марта 2016 года"><img src="files/main-gallery-2.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-3.jpg" rel="gallery" title="МАТЕРИАЛЬНЫЙ СКЛАД «СВИБЛОВО»" data-date="14 марта 2016 года"><img src="files/main-gallery-3.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-4.jpg" rel="gallery" title="3711 ЛЕСОЗАГОТОВИТЕЛЬНЫЙ УЧАСТОК" data-date="15 марта 2016 года"><img src="files/main-gallery-4.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-5.jpg" rel="gallery" title="ЗАВОД СБОРНЫХ КОНСТРУКЦИЙ И&nbsp;СТРОИТЕЛЬНЫХ ДЕТАЛЕЙ" data-date="16 марта 2016 года"><img src="files/main-gallery-5.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-6.jpg" rel="gallery" title="МАТЕРИАЛЬНЫЙ СКЛАД «СВИБЛОВО»" data-date="17 марта 2016 года"><img src="files/main-gallery-6.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-7.jpg" rel="gallery" title="ПРОИЗВОДСТВО №4" data-date="18 марта 2016 года"><img src="files/main-gallery-7.jpg" alt="" /></a></div>
                     </div>
                 </div>
 
@@ -529,19 +571,22 @@
 
                             <h2>Наши складские комплексы</h2>
 
-                            <ul class="geography-menu">
-                                <li class="active"><a href="#" class="wide">Москва и область</a></li>
-                                <li><a href="#">Вязьма</a></li>
-                                <li><a href="#">Гатчина</a></li>
-                                <li><a href="#">Екатеринбург</a></li>
-                                <li><a href="#">Костерёво</a></li>
-                                <li><a href="#">Ростов-на-Дону</a></li>
-                                <li><a href="#">Самара</a></li>
-                                <li><a href="#">Уссурийск</a></li>
-                                <li><a href="#">Хабаровск</a></li>
-                                <li><a href="#">Чита</a></li>
-                                <li><a href="#">Энгельс</a></li>
-                            </ul>
+                            <div class="geography-menu-wrap">
+                                <a href="#" class="geography-menu-value">Москва и область</a>
+                                <ul class="geography-menu">
+                                    <li class="active"><a href="#" class="wide">Москва и область</a></li>
+                                    <li><a href="#">Вязьма</a></li>
+                                    <li><a href="#">Гатчина</a></li>
+                                    <li><a href="#">Екатеринбург</a></li>
+                                    <li><a href="#">Костерёво</a></li>
+                                    <li><a href="#">Ростов-на-Дону</a></li>
+                                    <li><a href="#">Самара</a></li>
+                                    <li><a href="#">Уссурийск</a></li>
+                                    <li><a href="#">Хабаровск</a></li>
+                                    <li><a href="#">Чита</a></li>
+                                    <li><a href="#">Энгельс</a></li>
+                                </ul>
+                            </div>
 
                             <!-- geography list -->
                             <div class="geography-list active">
@@ -550,19 +595,6 @@
                                     <div class="geography-item-content">
                                         <div class="geography-item-title"><a href="#">ПБ «Очаково»</a></div>
                                         <div class="geography-item-cols">
-                                            <div class="geography-item-col">
-                                                <div class="geography-item-info">
-                                                    <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Телефон</div>
-                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
-                                                    </div>
-                                                    <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Адрес</div>
-                                                        <div class="geography-item-info-value">119530, г. Москва, Очаковское шоссе, д. 3 «А»</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <div class="geography-item-col">
                                                 <div class="geography-item-info">
                                                     <div class="geography-item-info-row">
@@ -579,8 +611,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">119530, г. Москва, Очаковское шоссе, д. 3 «А»</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                        <div class="geography-item-feedback">
+                                            <a href="#" class="geography-item-feedback-link">связаться</a>
+                                            <div class="geography-item-feedback-form">
+                                                <form action="#" method="post">
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Ваше имя</div>
+                                                        <div class="form-input"><input type="text" name="name" value="" class="required" placeholder="Василий Петров" /></div>
+                                                    </div>
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Телефон</div>
+                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 (___) ___-__-__" /></div>
+                                                    </div>
+                                                    <div class="form-submit"><input type="submit" value="ok" class="btn-1" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="geography-item-map">
                                         <div class="geography-item-map-inner" id="map1"></div>
@@ -620,19 +680,6 @@
                                             <div class="geography-item-col">
                                                 <div class="geography-item-info">
                                                     <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Телефон</div>
-                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
-                                                    </div>
-                                                    <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Адрес</div>
-                                                        <div class="geography-item-info-value">141730, Московская обл., г.Лобня, ул.Лейтенанта Бойко</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="geography-item-col">
-                                                <div class="geography-item-info">
-                                                    <div class="geography-item-info-row">
                                                         <div class="geography-item-info-name">Общая полезной площадь</div>
                                                         <div class="geography-item-info-value">6 241 м&sup2;</div>
                                                     </div>
@@ -646,8 +693,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">141730, Московская обл., г.Лобня, ул.Лейтенанта Бойко</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                        <div class="geography-item-feedback">
+                                            <a href="#" class="geography-item-feedback-link">связаться</a>
+                                            <div class="geography-item-feedback-form">
+                                                <form action="#" method="post">
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Ваше имя</div>
+                                                        <div class="form-input"><input type="text" name="name" value="" class="required" placeholder="Василий Петров" /></div>
+                                                    </div>
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Телефон</div>
+                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 (___) ___-__-__" /></div>
+                                                    </div>
+                                                    <div class="form-submit"><input type="submit" value="ok" class="btn-1" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="geography-item-map">
                                         <div class="geography-item-map-inner" id="map2"></div>
@@ -687,19 +762,6 @@
                                             <div class="geography-item-col">
                                                 <div class="geography-item-info">
                                                     <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Телефон</div>
-                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
-                                                    </div>
-                                                    <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Адрес</div>
-                                                        <div class="geography-item-info-value">443017, г. Самара, ул.&nbsp;Товарная, д.25</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="geography-item-col">
-                                                <div class="geography-item-info">
-                                                    <div class="geography-item-info-row">
                                                         <div class="geography-item-info-name">Общая полезной площадь</div>
                                                         <div class="geography-item-info-value">6 241 м&sup2;</div>
                                                     </div>
@@ -713,8 +775,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">443017, г. Самара, ул.&nbsp;Товарная, д.25</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                        <div class="geography-item-feedback">
+                                            <a href="#" class="geography-item-feedback-link">связаться</a>
+                                            <div class="geography-item-feedback-form">
+                                                <form action="#" method="post">
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Ваше имя</div>
+                                                        <div class="form-input"><input type="text" name="name" value="" class="required" placeholder="Василий Петров" /></div>
+                                                    </div>
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Телефон</div>
+                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 (___) ___-__-__" /></div>
+                                                    </div>
+                                                    <div class="form-submit"><input type="submit" value="ok" class="btn-1" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="geography-item-map">
                                         <div class="geography-item-map-inner" id="map3"></div>
@@ -758,19 +848,6 @@
                                             <div class="geography-item-col">
                                                 <div class="geography-item-info">
                                                     <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Телефон</div>
-                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
-                                                    </div>
-                                                    <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Адрес</div>
-                                                        <div class="geography-item-info-value">129344, г.Москва, ул.Искры, д.33 "А"</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="geography-item-col">
-                                                <div class="geography-item-info">
-                                                    <div class="geography-item-info-row">
                                                         <div class="geography-item-info-name">Общая полезной площадь</div>
                                                         <div class="geography-item-info-value">6 241 м&sup2;</div>
                                                     </div>
@@ -784,8 +861,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">129344, г.Москва, ул.Искры, д.33 "А"</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                        <div class="geography-item-feedback">
+                                            <a href="#" class="geography-item-feedback-link">связаться</a>
+                                            <div class="geography-item-feedback-form">
+                                                <form action="#" method="post">
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Ваше имя</div>
+                                                        <div class="form-input"><input type="text" name="name" value="" class="required" placeholder="Василий Петров" /></div>
+                                                    </div>
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Телефон</div>
+                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 (___) ___-__-__" /></div>
+                                                    </div>
+                                                    <div class="form-submit"><input type="submit" value="ok" class="btn-1" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="geography-item-map">
                                         <div class="geography-item-map-inner" id="map4"></div>
@@ -829,19 +934,6 @@
                                             <div class="geography-item-col">
                                                 <div class="geography-item-info">
                                                     <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Телефон</div>
-                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
-                                                    </div>
-                                                    <div class="geography-item-info-row">
-                                                        <div class="geography-item-info-name">Адрес</div>
-                                                        <div class="geography-item-info-value">344016, г. Ростов-на-Дону, пер. Нефтяной, 4 “A”</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="geography-item-col">
-                                                <div class="geography-item-info">
-                                                    <div class="geography-item-info-row">
                                                         <div class="geography-item-info-name">Общая полезной площадь</div>
                                                         <div class="geography-item-info-value">6 241 м&sup2;</div>
                                                     </div>
@@ -855,8 +947,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">344016, г. Ростов-на-Дону, пер. Нефтяной, 4 “A”</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                        <div class="geography-item-feedback">
+                                            <a href="#" class="geography-item-feedback-link">связаться</a>
+                                            <div class="geography-item-feedback-form">
+                                                <form action="#" method="post">
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Ваше имя</div>
+                                                        <div class="form-input"><input type="text" name="name" value="" class="required" placeholder="Василий Петров" /></div>
+                                                    </div>
+                                                    <div class="geography-item-feedback-field">
+                                                        <div class="form-label">Телефон</div>
+                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 (___) ___-__-__" /></div>
+                                                    </div>
+                                                    <div class="form-submit"><input type="submit" value="ok" class="btn-1" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="geography-item-map">
                                         <div class="geography-item-map-inner" id="map5"></div>
@@ -902,6 +1022,20 @@
                 <div class="how">
                     <img src="images/how-border.png" alt="" class="how-border" />
                     <div class="how-inner">
+                        <div class="main-header-form">
+                            <form action="#" method="post">
+                                <div class="form-input"><input type="text" name="name" value="" placeholder="Ваше имя" class="required" /></div>
+                                <div class="form-input"><input type="text" name="phone" value="" placeholder="Телефон " class="required maskPhone" /></div>
+                                <div class="form-input"><input type="text" name="email" value="" placeholder="Электронная почта" class="required email" /></div>
+                                <div class="form-input"><textarea name="message" rows="2" cols="10" placeholder="Опишите тип, объем груза и&nbsp;интересующий вас способ хранения" class="required"></textarea></div>
+                                <div class="main-header-form-text">Для получения полного расчета стоимости услуги хранения вам потребуется <a href="#">скачать анкету (.xls)</a>, заполнить ее и прикрепить к заявке.</div>
+                                <div class="form-file">
+                                    <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                    <div class="form-file-name"></div>
+                                </div>
+                                <div class="form-submit"><input type="submit" value="Стать клиентом" class="btn-1" /></div>
+                            </form>
+                        </div>
                         <div class="how-form">
                             <form action="#" method="post">
                                 <div class="how-form-row">
@@ -965,7 +1099,20 @@
                     <div class="footer-contacts-header">
                         <div class="footer-contacts-phone"><span>Контакты</span>+7 (495) 442-1250</div>
                         <div class="footer-feedback">
-                            <a href="#" class="btn-1">обратная связь</a>
+                            <a href="#" class="footer-feedback-link btn-1">обратная связь</a>
+                            <div class="footer-feedback-form">
+                                <form action="#" method="post">
+                                    <div class="footer-feedback-field">
+                                        <div class="form-label">Ваше имя</div>
+                                        <div class="form-input"><input type="text" name="name" value="" class="required" placeholder="Василий Петров" /></div>
+                                    </div>
+                                    <div class="footer-feedback-field">
+                                        <div class="form-label">Телефон</div>
+                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 (___) ___-__-__" /></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="ok" class="btn-1" /></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div class="footer-contacts-branches">
