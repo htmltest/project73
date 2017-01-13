@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Ответственное хранение</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" width="71" height="67" />
+                        <div class="logo-title">Складской комплекс «СВИБЛОВО»</div>
+                        <div class="logo-subtitle">ОТВЕТСТВЕННОЕ ХРАНЕНИЕ. надежно. недорого. гарантии</div>
+                    </div>
+
+                    <div class="header-email"><a href="mailto:ms_sviblovo@1470umto.ru">ms_sviblovo@1470umto.ru</a></div>
+
+                    <div class="header-phone">+7 (495) 442-1250<br /><a href="#">Перезвоните мне</a></div>
+
+                </header>
+
+                <!-- bg -->
+                <div class="bg bg-main" style="background-image:url(files/bg-main.jpg)">
+                    <!-- main header -->
+                    <div class="main-header">
+                        <div class="main-header-content">
+                            <h1>Горячее предложение</h1>
+                            <div class="main-header-title">Закажи услугу сейчас на год<br />и получи скидку в 10%</div>
+                        </div>
+
+                        <div class="main-header-form">
+                            <div class="timer-title">Осталось</div>
+                            <div class="timer" data-timestamp="2016/12/31 23:59:59">
+                                <div class="timer-item">
+                                    <div class="timer-item-value">0</div>
+                                    <div class="timer-item-name">дней</div>
+                                </div>
+                                <div class="timer-item">
+                                    <div class="timer-item-value">0</div>
+                                    <div class="timer-item-name">часов</div>
+                                </div>
+                                <div class="timer-item">
+                                    <div class="timer-item-value">0</div>
+                                    <div class="timer-item-name">минут</div>
+                                </div>
+                                <div class="timer-item">
+                                    <div class="timer-item-value">0</div>
+                                    <div class="timer-item-name">секунд</div>
+                                </div>
+                            </div>
+                            <a href="#order" class="btn-1 order-link">Заказать</a>
+                        </div>
+                    </div>
+                    <!-- main header END -->
+
+                    <img src="images/bg-border-main.png" alt="" class="bg-border" />
+                </div>
+                <!-- bg END -->
+
+                <!-- main scheme -->
+                <div class="main-scheme">
+                    <img src="images/main-scheme.png" alt="" class="main-scheme-img" data-width="1600" />
+                    <div class="main-scheme-title">Карта складского комплекса</div>
+
+                    <!-- main scheme point -->
+                    <div class="main-scheme-point" style="left:1018px; top:192px">
+                        <div class="main-scheme-point-title">1</div>
+                        <div class="main-scheme-point-content">
+                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
+                            <div class="main-scheme-point-info">
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Площадь комплекса</div>
+                                    <div class="main-scheme-point-info-row-value">37 330 кв.м.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Высота потолков</div>
+                                    <div class="main-scheme-point-info-row-value">12 метров</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пол</div>
+                                    <div class="main-scheme-point-info-row-value">наливной (антипыль)</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Нагрузка</div>
+                                    <div class="main-scheme-point-info-row-value">5 т/м2</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Электричество</div>
+                                    <div class="main-scheme-point-info-row-value">по запросу</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Коммуникации</div>
+                                    <div class="main-scheme-point-info-row-value">водоснабжение, канализация, отопление, система ливневой канализации</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Связь</div>
+                                    <div class="main-scheme-point-info-row-value">телефония, интернет</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пожаротушение</div>
+                                    <div class="main-scheme-point-info-row-value">сплинклерная система</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Погрузка/разгрузка</div>
+                                    <div class="main-scheme-point-info-row-value">докшелтеры/ворота - 25 шт.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Парковка</div>
+                                    <div class="main-scheme-point-info-row-value">около здания или на территории</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Охрана</div>
+                                    <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main scheme point END -->
+
+                    <!-- main scheme point -->
+                    <div class="main-scheme-point" style="left:800px; top:345px">
+                        <div class="main-scheme-point-title">2</div>
+                        <div class="main-scheme-point-content">
+                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
+                            <div class="main-scheme-point-info">
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Площадь комплекса</div>
+                                    <div class="main-scheme-point-info-row-value">37 330 кв.м.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Высота потолков</div>
+                                    <div class="main-scheme-point-info-row-value">12 метров</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пол</div>
+                                    <div class="main-scheme-point-info-row-value">наливной (антипыль)</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Нагрузка</div>
+                                    <div class="main-scheme-point-info-row-value">5 т/м2</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Электричество</div>
+                                    <div class="main-scheme-point-info-row-value">по запросу</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Коммуникации</div>
+                                    <div class="main-scheme-point-info-row-value">водоснабжение, канализация, отопление, система ливневой канализации</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Связь</div>
+                                    <div class="main-scheme-point-info-row-value">телефония, интернет</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пожаротушение</div>
+                                    <div class="main-scheme-point-info-row-value">сплинклерная система</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Погрузка/разгрузка</div>
+                                    <div class="main-scheme-point-info-row-value">докшелтеры/ворота - 25 шт.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Парковка</div>
+                                    <div class="main-scheme-point-info-row-value">около здания или на территории</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Охрана</div>
+                                    <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main scheme point END -->
+
+                    <!-- main scheme point -->
+                    <div class="main-scheme-point" style="left:368px; top:415px">
+                        <div class="main-scheme-point-title">3</div>
+                        <div class="main-scheme-point-content">
+                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
+                            <div class="main-scheme-point-info">
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Площадь комплекса</div>
+                                    <div class="main-scheme-point-info-row-value">37 330 кв.м.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Высота потолков</div>
+                                    <div class="main-scheme-point-info-row-value">12 метров</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пол</div>
+                                    <div class="main-scheme-point-info-row-value">наливной (антипыль)</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Нагрузка</div>
+                                    <div class="main-scheme-point-info-row-value">5 т/м2</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Электричество</div>
+                                    <div class="main-scheme-point-info-row-value">по запросу</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Коммуникации</div>
+                                    <div class="main-scheme-point-info-row-value">водоснабжение, канализация, отопление, система ливневой канализации</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Связь</div>
+                                    <div class="main-scheme-point-info-row-value">телефония, интернет</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пожаротушение</div>
+                                    <div class="main-scheme-point-info-row-value">сплинклерная система</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Погрузка/разгрузка</div>
+                                    <div class="main-scheme-point-info-row-value">докшелтеры/ворота - 25 шт.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Парковка</div>
+                                    <div class="main-scheme-point-info-row-value">около здания или на территории</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Охрана</div>
+                                    <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main scheme point END -->
+
+                    <!-- main scheme point -->
+                    <div class="main-scheme-point" style="left:152px; top:515px">
+                        <div class="main-scheme-point-title">4</div>
+                        <div class="main-scheme-point-content">
+                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
+                            <div class="main-scheme-point-info">
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Площадь комплекса</div>
+                                    <div class="main-scheme-point-info-row-value">37 330 кв.м.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Высота потолков</div>
+                                    <div class="main-scheme-point-info-row-value">12 метров</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пол</div>
+                                    <div class="main-scheme-point-info-row-value">наливной (антипыль)</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Нагрузка</div>
+                                    <div class="main-scheme-point-info-row-value">5 т/м2</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Электричество</div>
+                                    <div class="main-scheme-point-info-row-value">по запросу</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Коммуникации</div>
+                                    <div class="main-scheme-point-info-row-value">водоснабжение, канализация, отопление, система ливневой канализации</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Связь</div>
+                                    <div class="main-scheme-point-info-row-value">телефония, интернет</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Пожаротушение</div>
+                                    <div class="main-scheme-point-info-row-value">сплинклерная система</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Погрузка/разгрузка</div>
+                                    <div class="main-scheme-point-info-row-value">докшелтеры/ворота - 25 шт.</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Парковка</div>
+                                    <div class="main-scheme-point-info-row-value">около здания или на территории</div>
+                                </div>
+                                <div class="main-scheme-point-info-row">
+                                    <div class="main-scheme-point-info-row-name">Охрана</div>
+                                    <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main scheme point END -->
+                </div>
+                <!-- main scheme END -->
+
+                <div class="main-services-menu">
+                    <div class="main-services-menu-inner">
+                        <div class="main-services-menu-title">Складские услуги</div>
+                        <ul class="services-menu">
+                            <li><a href="#">Кросс-докинг</a></li>
+                            <li><a href="#">Экспедирование</a></li>
+                            <li><a href="#">Ответственное хранение</a></li>
+                            <li><a href="#">Транспортные услуги</a></li>
+                            <li><a href="#">Погрузочно- разгрузочные работы</a></li>
+                            <li><a href="#">Страхование груза</a></li>
+                            <li><a href="#">Комплектация товара</a></li>
+                            <li><a href="#">Упаковка</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- order -->
+                <div id="order">
+                    <div class="how-form">
+                        <form action="#" method="post">
+                            <div class="how-form-row">
+                                <div class="how-form-fields">
+                                    <div class="how-form-field">
+                                        <div class="form-label">Ваше имя</div>
+                                        <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                                    </div>
+                                    <div class="how-form-field">
+                                        <div class="form-label">Телефон</div>
+                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+                                    </div>
+                                    <div class="how-form-field">
+                                        <div class="form-label">Электронная почта</div>
+                                        <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                                    </div>
+                                    <div class="form-input"><textarea name="message" rows="2" cols="10" placeholder="Опишите тип, объем груза и&nbsp;интересующий вас способ хранения" class="required"></textarea></div>
+                                </div>
+                                <div class="how-form-file">
+                                    <div class="main-header-form-text">Для получения полного расчета стоимости услуги хранения вам потребуется <a href="#">скачать анкету (.xls)</a>, заполнить ее и прикрепить к заявке.</div>
+                                    <div class="form-file">
+                                        <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                        <div class="form-file-name"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-submit"><input type="submit" value="Стать клиентом" class="btn-1" /></div>
+                        </form>
+                    </div>
+                </div>
+                <!-- order END -->
+
+                <!-- why -->
+                <div class="why">
+                    <h2>Почему мы?</h2>
+                    <ul class="why-menu">
+                        <li class="active"><a href="#">Работаем даже<br />с «маленькими»</a></li>
+                        <li><a href="#">Круглосуточная охрана<br />и работа склада</a></li>
+                        <li><a href="#">Нет очередей</a></li>
+                        <li><a href="#">Персональный менеджер<br />24 часа</a></li>
+                        <li><a href="#">Удобный<br />личный кабинет</a></li>
+                    </ul>
+
+                    <div class="why-tab active">
+                        <div class="why-tab-title">Работаем даже с «маленькими»</div>
+                        <div class="why-tab-text">
+                            <p>Главным направлением деятельности АО «1470 УМТО» является предоставление полного комплекса услуг по ответственному хранению и обработке грузов, включая разгрузочно-погрузочные работы, кросс-докинг, комплектацию заказов и отправку грузов сборными вагонами, контейнерами, автопоездами (в т.ч. отправка тяжеловесных и крупногабаритных грузов, специальной техники на ж/д платформах), а также доставку со складов обработанных и упакованных грузов конечному потребителю.</p>
+                            <p>Одно из наших важнейших преимуществ – территориальное расположение складских комплексов: филиалы АО «1470 УМТО» расположены в регионах и городах, обладающих значительным потенциалом для развития бизнеса на рынках транспортных и складских услуг.</p>
+                            <a href="#" class="btn-2">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="why-tab">
+                        <div class="why-tab-title">Круглосуточная охрана и работа склада</div>
+                        <div class="why-tab-text">
+                            <p>Одно из наших важнейших преимуществ – территориальное расположение складских комплексов: филиалы АО «1470 УМТО» расположены в регионах и городах, обладающих значительным потенциалом для развития бизнеса на рынках транспортных и складских услуг.</p>
+                            <p>Главным направлением деятельности АО «1470 УМТО» является предоставление полного комплекса услуг по ответственному хранению и обработке грузов, включая разгрузочно-погрузочные работы, кросс-докинг, комплектацию заказов и отправку грузов сборными вагонами, контейнерами, автопоездами (в т.ч. отправка тяжеловесных и крупногабаритных грузов, специальной техники на ж/д платформах), а также доставку со складов обработанных и упакованных грузов конечному потребителю.</p>
+                            <a href="#" class="btn-2">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="why-tab">
+                        <div class="why-tab-title">Нет очередей</div>
+                        <div class="why-tab-text">
+                            <p>Главным направлением деятельности АО «1470 УМТО» является предоставление полного комплекса услуг по ответственному хранению и обработке грузов, включая разгрузочно-погрузочные работы, кросс-докинг, комплектацию заказов и отправку грузов сборными вагонами, контейнерами, автопоездами (в т.ч. отправка тяжеловесных и крупногабаритных грузов, специальной техники на ж/д платформах), а также доставку со складов обработанных и упакованных грузов конечному потребителю.</p>
+                            <a href="#" class="btn-2">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="why-tab">
+                        <div class="why-tab-title">Персональный менеджер 24 часа</div>
+                        <div class="why-tab-text">
+                            Одно из наших важнейших преимуществ – территориальное расположение складских комплексов: филиалы АО «1470 УМТО» расположены в регионах и городах, обладающих значительным потенциалом для развития бизнеса на рынках транспортных и складских услуг.
+                            <a href="#" class="btn-2">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="why-tab">
+                        <div class="why-tab-title">Удобный личный кабинет</div>
+                        <div class="why-tab-text">
+                            <a href="#" class="btn-2">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- why END -->
+
+                <!-- new how -->
+                <div class="new-how">
+                    <img src="images/new-how-border-top.png" alt="" class="new-how-border-top" />
+                    <img src="images/new-how-border-bottom.png" alt="" class="new-how-border-bottom" />
+                    <div class="new-how-inner">
+                        <h2>Как мы работаем</h2>
+                        <div class="how-list">
+                            <div class="how-item">
+                                <div class="how-item-step">1</div>
+                                <div class="how-item-title">Методы хранения</div>
+                                <div class="how-item-text">Производственно-логистическая компания «1470 УМТО» предлагает услуги склада для интернет-магазина в Москве и Московской области, а также в других городах Российской Федерации</div>
+                            </div>
+                            <div class="how-sep"></div>
+                            <div class="how-item">
+                                <div class="how-item-step">2</div>
+                                <div class="how-item-title">Укладка товаров</div>
+                                <div class="how-item-text">Штабельная укладка может быть прямой, перекрестной и выполняться по принципу обратной клетки. Этот метод используется для складирования товаров в мешках, кипах, кулях, бочках, ящиках, на стоечных и ящичных поддонах</div>
+                            </div>
+                            <div class="how-sep"></div>
+                            <div class="how-item">
+                                <div class="how-item-step">3</div>
+                                <div class="how-item-title">Сохранность товара</div>
+                                <div class="how-item-text">Хранение продукции на складе должно быть организовано таким образом, чтобы обеспечивать сохранность ее потребительских качеств. Необходимо поддерживать определенный температурный режим, уровень влажности</div>
+                            </div>
+                            <div class="how-sep"></div>
+                            <div class="how-item">
+                                <div class="how-item-step">4</div>
+                                <div class="how-item-title">Складское оборудование</div>
+                                <div class="how-item-text">Складской процесс невозможен без применения подъемно- разгрузочного оборудования. Организация хранения товаров на складе предусматривает наличие механизмов и машин</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- new how END -->
+
+                <!-- main gallery -->
+                <div class="main-gallery">
+                    <div class="main-gallery-title">Фотографии комплекса</div>
+                    <div class="main-gallery-list">
+                        <div class="main-gallery-item"><a href="files/main-gallery-1.jpg" rel="gallery"><img src="files/main-gallery-1.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-2.jpg" rel="gallery"><img src="files/main-gallery-2.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-3.jpg" rel="gallery"><img src="files/main-gallery-3.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-4.jpg" rel="gallery"><img src="files/main-gallery-4.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-5.jpg" rel="gallery"><img src="files/main-gallery-5.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-6.jpg" rel="gallery"><img src="files/main-gallery-6.jpg" alt="" /></a></div>
+                        <div class="main-gallery-item"><a href="files/main-gallery-7.jpg" rel="gallery"><img src="files/main-gallery-7.jpg" alt="" /></a></div>
+                    </div>
+                </div>
+
+                <!-- main map -->
+                <div class="main-map">
+                    <div id="map"></div>
+                    <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                    <script>
+                        ymaps.ready(init);
+
+                        var myMap;
+
+                        function init() {
+                            myMap = new ymaps.Map('map', {
+                                center: [55.69489, 37.461921],
+                                zoom: 15,
+                                controls: []
+                            });
+
+                            myMap.behaviors.disable('scrollZoom');
+
+                            var myPlacemark = new ymaps.Placemark([55.69489, 37.461921], {}, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'images/map-icon-big.png',
+                                iconImageSize: [70, 70],
+                                iconImageOffset: [-35, -35]
+                            });
+                            myMap.geoObjects.add(myPlacemark);
+                        }
+                    </script>
+                    <img src="images/main-map-border-top.png" alt="" class="main-map-border-top" />
+                    <img src="images/main-map-border-bottom.png" alt="" class="main-map-border-bottom" />
+                    <div class="main-map-title">Расположение</div>
+
+                    <div class="main-map-info">
+                        <div class="main-map-info-wrap">
+                            <div class="main-map-info-block">
+                                <div class="main-map-info-header">
+                                    <div class="main-map-info-title">Складской комплекс «СВИБЛОВО»</div>
+                                    <div class="main-map-info-subtitle">Складские услуг и ответственное хранение грузов</div>
+                                </div>
+                                <div class="main-map-info-content">
+                                    <dl>
+                                        <dt>Адрес</dt>
+                                        <dd>129344, г.Москва, ул.Искры, д.33 "А"</dd>
+
+                                        <dt>Телефон</dt>
+                                        <dd>+7 (499) 186-13-04</dd>
+
+                                        <dt>Электронная почта</dt>
+                                        <dd><a href="#">89032227750@mail.ru</a></dd>
+
+                                        <dt>начальник филиала</dt>
+                                        <dd>Кулибабин Вадим Александрович</dd>
+                                    </dl>
+                                    <a href="#" class="btn-1">Скачать реквизиты<span>48 Кб, Word</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main map END -->
+
+                <!-- main geography -->
+                <div class="main-geography">
+
+                    <!-- main geography inner -->
+                    <div class="main-geography-inner">
+                        <!-- main geography wrap -->
+                        <div class="main-geography-wrap">
+
+                            <h2>Наши складские комплексы</h2>
+
+                            <ul class="geography-menu">
+                                <li class="active"><a href="#" class="wide">Москва и область</a></li>
+                                <li><a href="#">Вязьма</a></li>
+                                <li><a href="#">Гатчина</a></li>
+                                <li><a href="#">Екатеринбург</a></li>
+                                <li><a href="#">Костерёво</a></li>
+                                <li><a href="#">Ростов-на-Дону</a></li>
+                                <li><a href="#">Самара</a></li>
+                                <li><a href="#">Уссурийск</a></li>
+                                <li><a href="#">Хабаровск</a></li>
+                                <li><a href="#">Чита</a></li>
+                                <li><a href="#">Энгельс</a></li>
+                            </ul>
+
+                            <!-- geography list -->
+                            <div class="geography-list active">
+                                <!-- geography item -->
+                                <div class="geography-item">
+                                    <div class="geography-item-content">
+                                        <div class="geography-item-title"><a href="#">ПБ «Очаково»</a></div>
+                                        <div class="geography-item-cols">
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">119530, г. Москва, Очаковское шоссе, д. 3 «А»</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Общая полезной площадь</div>
+                                                        <div class="geography-item-info-value">6 241 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Открытая площадка</div>
+                                                        <div class="geography-item-info-value">1 950 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Офисные помещения</div>
+                                                        <div class="geography-item-info-value">354 м&sup2;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                    </div>
+                                    <div class="geography-item-map">
+                                        <div class="geography-item-map-inner" id="map1"></div>
+                                        <script>
+
+                                            ymaps.ready(init1);
+
+                                            var myMap1;
+
+                                            function init1() {
+                                                myMap1 = new ymaps.Map('map1', {
+                                                    center: [55.69489, 37.461921],
+                                                    zoom: 16,
+                                                    controls: []
+                                                });
+
+                                                myMap1.behaviors.disable('scrollZoom');
+
+                                                var myPlacemark = new ymaps.Placemark([55.69489, 37.461921], {}, {
+                                                    iconLayout: 'default#image',
+                                                    iconImageHref: 'images/map-icon.png',
+                                                    iconImageSize: [41, 41],
+                                                    iconImageOffset: [-20, -20]
+                                                });
+                                                myMap1.geoObjects.add(myPlacemark);
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                                <!-- geography item END -->
+
+                                <!-- geography item -->
+                                <div class="geography-item">
+                                    <div class="geography-item-content">
+                                        <div class="geography-item-title"><a href="#">МС «Лобня»</a></div>
+                                        <div class="geography-item-cols">
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">141730, Московская обл., г.Лобня, ул.Лейтенанта Бойко</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Общая полезной площадь</div>
+                                                        <div class="geography-item-info-value">6 241 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Открытая площадка</div>
+                                                        <div class="geography-item-info-value">1 950 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Офисные помещения</div>
+                                                        <div class="geography-item-info-value">354 м&sup2;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                    </div>
+                                    <div class="geography-item-map">
+                                        <div class="geography-item-map-inner" id="map2"></div>
+                                        <script>
+
+                                            ymaps.ready(init2);
+
+                                            var myMap2;
+
+                                            function init2() {
+                                                myMap2 = new ymaps.Map('map2', {
+                                                    center: [56.025824, 37.430696],
+                                                    zoom: 16,
+                                                    controls: []
+                                                });
+
+                                                myMap2.behaviors.disable('scrollZoom');
+
+                                                var myPlacemark = new ymaps.Placemark([56.025824, 37.430696], {}, {
+                                                    iconLayout: 'default#image',
+                                                    iconImageHref: 'images/map-icon.png',
+                                                    iconImageSize: [41, 41],
+                                                    iconImageOffset: [-20, -20]
+                                                });
+                                                myMap2.geoObjects.add(myPlacemark);
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                                <!-- geography item END -->
+
+                                <!-- geography item -->
+                                <div class="geography-item">
+                                    <div class="geography-item-content">
+                                        <div class="geography-item-title"><a href="#">МО, Ж/Д СТ. СЕЛЯТИНО, МС «ТАМАНЬ»</a></div>
+                                        <div class="geography-item-cols">
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">443017, г. Самара, ул.&nbsp;Товарная, д.25</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Общая полезной площадь</div>
+                                                        <div class="geography-item-info-value">6 241 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Открытая площадка</div>
+                                                        <div class="geography-item-info-value">1 950 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Офисные помещения</div>
+                                                        <div class="geography-item-info-value">354 м&sup2;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                    </div>
+                                    <div class="geography-item-map">
+                                        <div class="geography-item-map-inner" id="map3"></div>
+                                        <script>
+
+                                            ymaps.ready(init3);
+
+                                            var myMap3;
+
+                                            function init3() {
+                                                myMap3 = new ymaps.Map('map3', {
+                                                    center: [53.240258, 50.298218],
+                                                    zoom: 16,
+                                                    controls: []
+                                                });
+
+                                                myMap3.behaviors.disable('scrollZoom');
+
+                                                var myPlacemark = new ymaps.Placemark([53.240258, 50.298218], {}, {
+                                                    iconLayout: 'default#image',
+                                                    iconImageHref: 'images/map-icon.png',
+                                                    iconImageSize: [41, 41],
+                                                    iconImageOffset: [-20, -20]
+                                                });
+                                                myMap3.geoObjects.add(myPlacemark);
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                                <!-- geography item END -->
+                            </div>
+                            <!-- geography list END -->
+
+                            <!-- geography list -->
+                            <div class="geography-list">
+                                <!-- geography item -->
+                                <div class="geography-item">
+                                    <div class="geography-item-content">
+                                        <div class="geography-item-title"><a href="#">МС «СВИБЛОВО»</a></div>
+                                        <div class="geography-item-cols">
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">129344, г.Москва, ул.Искры, д.33 "А"</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Общая полезной площадь</div>
+                                                        <div class="geography-item-info-value">6 241 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Открытая площадка</div>
+                                                        <div class="geography-item-info-value">1 950 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Офисные помещения</div>
+                                                        <div class="geography-item-info-value">354 м&sup2;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                    </div>
+                                    <div class="geography-item-map">
+                                        <div class="geography-item-map-inner" id="map4"></div>
+                                        <script>
+
+                                            ymaps.ready(init4);
+
+                                            var myMap4;
+
+                                            function init4() {
+                                                myMap4 = new ymaps.Map('map4', {
+                                                    center: [55.864076, 37.649894],
+                                                    zoom: 16,
+                                                    controls: []
+                                                });
+
+                                                myMap4.behaviors.disable('scrollZoom');
+
+                                                var myPlacemark = new ymaps.Placemark([55.864076, 37.649894], {}, {
+                                                    iconLayout: 'default#image',
+                                                    iconImageHref: 'images/map-icon.png',
+                                                    iconImageSize: [41, 41],
+                                                    iconImageOffset: [-20, -20]
+                                                });
+                                                myMap4.geoObjects.add(myPlacemark);
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                                <!-- geography item END -->
+                            </div>
+                            <!-- geography list END -->
+
+                            <!-- geography list -->
+                            <div class="geography-list">
+                                <!-- geography item -->
+                                <div class="geography-item">
+                                    <div class="geography-item-content">
+                                        <div class="geography-item-title"><a href="#">Г. РОСТОВ-НА-ДОНУ, ОМС №2</a></div>
+                                        <div class="geography-item-cols">
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Телефон</div>
+                                                        <div class="geography-item-info-value">+7 (495) 442-1250</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Адрес</div>
+                                                        <div class="geography-item-info-value">344016, г. Ростов-на-Дону, пер. Нефтяной, 4 “A”</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="geography-item-col">
+                                                <div class="geography-item-info">
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Общая полезной площадь</div>
+                                                        <div class="geography-item-info-value">6 241 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Открытая площадка</div>
+                                                        <div class="geography-item-info-value">1 950 м&sup2;</div>
+                                                    </div>
+                                                    <div class="geography-item-info-row">
+                                                        <div class="geography-item-info-name">Офисные помещения</div>
+                                                        <div class="geography-item-info-value">354 м&sup2;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geography-item-link"><a href="#">связаться</a></div>
+                                    </div>
+                                    <div class="geography-item-map">
+                                        <div class="geography-item-map-inner" id="map5"></div>
+                                        <script>
+
+                                            ymaps.ready(init5);
+
+                                            var myMap5;
+
+                                            function init5() {
+                                                myMap5 = new ymaps.Map('map5', {
+                                                    center: [47.256962, 39.625711],
+                                                    zoom: 16,
+                                                    controls: []
+                                                });
+
+                                                myMap5.behaviors.disable('scrollZoom');
+
+                                                var myPlacemark = new ymaps.Placemark([47.256962, 39.625711], {}, {
+                                                    iconLayout: 'default#image',
+                                                    iconImageHref: 'images/map-icon.png',
+                                                    iconImageSize: [41, 41],
+                                                    iconImageOffset: [-20, -20]
+                                                });
+                                                myMap5.geoObjects.add(myPlacemark);
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                                <!-- geography item END -->
+                            </div>
+                            <!-- geography list END -->
+
+                        </div>
+                        <!-- main geography wrap END -->
+                    </div>
+                    <!-- main geography inner END -->
+
+                </div>
+                <!-- main geography END -->
+
+                <!-- how -->
+                <div class="how">
+                    <img src="images/how-border.png" alt="" class="how-border" />
+                    <div class="how-inner">
+                        <div class="how-form">
+                            <form action="#" method="post">
+                                <div class="how-form-row">
+                                    <div class="how-form-fields">
+                                        <div class="how-form-field">
+                                            <div class="form-label">Ваше имя</div>
+                                            <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                                        </div>
+                                        <div class="how-form-field">
+                                            <div class="form-label">Телефон</div>
+                                            <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+                                        </div>
+                                        <div class="how-form-field">
+                                            <div class="form-label">Электронная почта</div>
+                                            <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                                        </div>
+                                        <div class="form-input"><textarea name="message" rows="2" cols="10" placeholder="Опишите тип, объем груза и&nbsp;интересующий вас способ хранения" class="required"></textarea></div>
+                                    </div>
+                                    <div class="how-form-file">
+                                        <div class="main-header-form-text">Для получения полного расчета стоимости услуги хранения вам потребуется <a href="#">скачать анкету (.xls)</a>, заполнить ее и прикрепить к заявке.</div>
+                                        <div class="form-file">
+                                            <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                            <div class="form-file-name"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-submit"><input type="submit" value="Стать клиентом" class="btn-1" /></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- how END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer class="main-page-footer">
+            <div class="footer-inner">
+                <div class="footer-copyrights">
+                    <div class="footer-logo">
+                        <img src="images/footer-logo.png" alt="" width="53" height="49" />
+                        <div class="footer-logo-title">Ответственное хранение</div>
+                        <div class="footer-logo-subtitle">от Москвы до Владивостока</div>
+                    </div>
+                    <div class="footer-copyrights-text">© 2016 АО «1470 УМТО»</div>
+                    <div class="footer-politics"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="footer-developer">Разработка сайта - <a href="#">Bilingo Digital Agency</a></div>
+                </div>
+
+                <ul class="footer-menu">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">География</a></li>
+                    <li><a href="#">Складские услуги</a></li>
+                    <li><a href="#">Филиалы</a></li>
+                    <li><a href="#">Контактная информация</a></li>
+                    <li><a href="#">Фотогалерея</a></li>
+                </ul>
+
+                <div class="footer-contacts">
+                    <div class="footer-contacts-header">
+                        <div class="footer-contacts-phone"><span>Контакты</span>+7 (495) 442-1250</div>
+                        <div class="footer-feedback">
+                            <a href="#" class="btn-1">обратная связь</a>
+                        </div>
+                    </div>
+                    <div class="footer-contacts-branches">
+                        <div class="footer-contacts-branches-item">
+                            <div class="footer-contacts-branches-name">ПБ «Очаково»</div>
+                            <div class="footer-contacts-branches-address">119530, г. Москва, Очаковское шоссе, д. 3 «А»</div>
+                        </div>
+                        <div class="footer-contacts-branches-item">
+                            <div class="footer-contacts-branches-name">МС «Самара»</div>
+                            <div class="footer-contacts-branches-address">443017, г. Самара, ул. Товарная, д.25</div>
+                        </div>
+                        <div class="footer-contacts-branches-item">
+                            <div class="footer-contacts-branches-name">ПБ «Очаково»</div>
+                            <div class="footer-contacts-branches-address">119530, г. Москва, Очаковское шоссе, д. 3 «А»</div>
+                        </div>
+                    </div>
+                    <div class="footer-contacts-branches-all"><a href="#">Все филиалы</a></div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
