@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $('.main-gallery-item a').click(function(e) {
+        $('html').data('scrollTop', $(window).scrollTop());
+        $('.wrapper').css('margin-top', -$(window).scrollTop());
+        e.preventDefault();
+    });
+
     $('.main-gallery-item a').fancybox({
         prevEffect: 'none',
         nextEffect: 'none',
@@ -20,6 +26,8 @@ $(document).ready(function() {
 				height	: 58
 			}
         },
+        closeEffect: 'none',
+        closeSpeed: 0,
         beforeShow: function() { this.title += '<div class="fancybox-title-date">' + $(this.element).data('date') + '</div><a href="' + $(this.element).attr('href') + '" download class="fancybox-download-link"></a>'}
     });
 
@@ -116,6 +124,45 @@ $(document).ready(function() {
         adaptiveHeight: true,
         arrows: false,
         dots: true
+    });
+
+    $('.header-phone-window-link').click(function(e) {
+        $(this).parent().toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.header-phone').length == 0) {
+            $('.header-phone').removeClass('open');
+        }
+    });
+
+    $('.top-mobile-callback-link').click(function(e) {
+        $(this).parent().toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.top-mobile-callback').length == 0) {
+            $('.top-mobile-callback').removeClass('open');
+        }
+    });
+
+    $('body').on('click', '.why-tab-more-link', function(e) {
+        $(this).parents().filter('.why-tab-text').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(window).on('load resize', function() {
+        $('.why-tab-text').each(function() {
+            var curBlock = $(this);
+            curBlock.removeClass('open');
+            if (curBlock.find('.why-tab-text-wrap').outerHeight() < curBlock.find('.why-tab-text-inner').outerHeight()) {
+                curBlock.addClass('why-tab-text-with-link');
+            } else {
+                curBlock.removeCass('why-tab-text-with-link');
+            }
+        });
     });
 
 });

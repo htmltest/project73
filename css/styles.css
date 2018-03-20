@@ -60,15 +60,15 @@ li ol li:nth-child(23):before {content:"w."}
 li ol li:nth-child(24):before {content:"x."}
 li ol li:nth-child(25):before {content:"y."}
 li ol li:nth-child(26):before {content:"z."}
-table {font-size:16px; line-height:20px; border-collapse:collapse; width:100%; margin:40px 0}
-table th {vertical-align:top; padding:18px 0 21px 30px; border-bottom:2px solid #ffc613; font-size:12px; font-weight:bold; text-align:left; text-transform:uppercase; color:#000}
-table th:first-child {padding-left:0}
-table td {vertical-align:top; padding:18px 0 21px 30px; border-top:1px solid #e6e6e6}
-table td:first-child {padding-left:0}
-table tbody tr:first-child td {border-top:none}
-table thead+tbody {border-bottom:2px solid #ffc613}
-table p {margin:10px 0 0 0}
-table p:first-child {margin:0}
+.wrapper table {font-size:16px; line-height:20px; border-collapse:collapse; width:100%; margin:40px 0}
+.wrapper table th {vertical-align:top; padding:18px 0 21px 30px; border-bottom:2px solid #ffc613; font-size:12px; font-weight:bold; text-align:left; text-transform:uppercase; color:#000}
+.wrapper table th:first-child {padding-left:0}
+.wrapper table td {vertical-align:top; padding:18px 0 21px 30px; border-top:1px solid #e6e6e6}
+.wrapper table td:first-child {padding-left:0}
+.wrapper table tbody tr:first-child td {border-top:none}
+.wrapper table thead+tbody {border-bottom:2px solid #ffc613}
+.wrapper table p {margin:10px 0 0 0}
+.wrapper table p:first-child {margin:0}
 
 @media (max-width:1199px) {
     h1 {font-size:45px; line-height:50px}
@@ -81,7 +81,7 @@ table p:first-child {margin:0}
     ul li:before {top:9px}
     ol {margin:25px 0}
     ol li {margin:25px 0}
-    table {margin:50px 0}
+    .wrapper table {margin:50px 0}
 
     .mobile-wide {margin-left:-55px; margin-right:-55px}
 }
@@ -197,15 +197,16 @@ form {margin:40px 0; padding:0}
 @media (max-width:1199px) {
     .top-mobile {display:block; position:fixed; left:0; top:0; right:0; z-index:8000; background:#333; height:50px; padding:0 55px}
     .top-mobile-phone {float:left; padding:0 0 0 25px; background:url(../images/header-phone.png) no-repeat left 15px; color:#fff; font-weight:bold; font-size:20px; line-height:42px}
-    .top-mobile-callback {float:right}
-    .top-mobile-callback a {color:#ffc613; font:12px/50px "DINProMedium", sans-serif; text-transform:uppercase; text-decoration:none}
-    .top-mobile-callback a:hover {color:#ffe613}
+    .top-mobile-callback {float:right; position:relative}
+    .top-mobile-callback-link {color:#ffc613; font:12px/50px "DINProMedium", sans-serif; text-transform:uppercase; text-decoration:none}
+    .top-mobile-callback-link:hover {color:#ffe613}
+    .top-mobile-callback.open .header-phone-window {display:block}
 }
 
 .bg {position:absolute; left:0; top:40px; right:0; height:850px; background:#333 no-repeat center; background-size:cover}
 .bg-border {position:absolute; left:0; bottom:0; display:block; width:100%; z-index:5}
 
-header {position:relative; max-width:1170px; padding:0 15px 0 15px; margin:0 auto; height:86px; z-index:9; overflow:hidden}
+header {position:relative; max-width:1170px; padding:0 15px 0 15px; margin:0 auto; height:86px; z-index:9}
 header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
 .logo {float:left; margin:15px 0 0 0}
@@ -217,8 +218,30 @@ header:after {content:"."; display:block; clear:both; visibility:hidden; height:
 .header-email {float:right; color:#fff; font-size:15px; margin:37px 0 0 0; padding:0 0 0 35px; background:url(../images/header-email.png) no-repeat left 5px}
 .header-email a {color:#fff}
 
-.header-phone {float:right; color:#fff; font-size:20px; font-weight:bold; padding:0 0 0 25px; margin:39px 30px 0 0; background:url(../images/header-phone.png) no-repeat left 2px; text-transform:uppercase}
-.header-phone a {font:11px/15px DINProMedium, sans-serif; color:#fff; text-decoration:underline; font-weight:normal}
+.header-phone {float:right; color:#fff; font-size:20px; font-weight:bold; position:relative; padding:0 0 0 25px; margin:39px 30px 0 0; background:url(../images/header-phone.png) no-repeat left 2px; text-transform:uppercase}
+a.header-phone-window-link {font:11px/15px DINProMedium, sans-serif; color:#fff; text-decoration:underline; font-weight:normal}
+
+.header-phone-window {display:none; position:absolute; left:-221px; top:100%; width:370px; padding:5px 0 0 0}
+.header-phone.open .header-phone-window {display:block}
+.header-phone-window::before {content:""; display:block; height:19px; background:url(../images/header-phone-window-top.png); position:relative}
+.header-phone-window-content {background:#f7f7f7; border-radius:0 0 3px 3px; box-shadow:0 15px 81px rgba(0, 0, 0, .41)}
+.header-phone-window-content form {margin:0; padding:21px 30px 45px 30px}
+.header-phone-window-content .form-label {margin:19px 0 0 0}
+.header-phone-window-content .form-input {margin:1px 0 0 0}
+.header-phone-window-content .form-input input {border-color:#fff}
+.header-phone-window-content .form-input input.error {border-color:#fff}
+.header-phone-window-content .form-input input:hover {border-color:#b3b3b3}
+.header-phone-window-content .form-input input.error {border-color:#f02a2a}
+.header-phone-window-content .form-input input.success {border-color:#84b85a}
+.header-phone-window-content .form-input input:focus {border-color:#888989}
+.header-phone-window-content .form-input label.error {font-size:14px; line-height:20px; font-weight:normal; text-transform:none}
+.header-phone-window-content .form-submit {width:auto; margin:44px 0 0 0}
+.header-phone-window-content .form-submit .btn-1 {height:50px; line-height:50px; font-size:14px}
+
+@media (max-width:1199px) {
+    .header-phone {display:none}
+    .header-email {display:none}
+}
 
 .content {max-width:970px; padding:60px 115px 0 115px; margin:0 auto; position:relative; background:#fff; border-top:10px solid #ffc613; z-index:10}
 
@@ -376,13 +399,23 @@ header:after {content:"."; display:block; clear:both; visibility:hidden; height:
     .why-menu li.active a:after {height:7px; top:0; background:#000}
 }
 
-.why-tab {display:none; background:#f7f7f7 url(../images/why-bottom.png) no-repeat left bottom; background-size:100% auto; padding:0 50px 90px 50px; color:#000}
+.why-tabs {position:relative; background:#f7f7f7; padding:0 50px 70px 50px; color:#000}
+.why-tab {position:absolute; left:-9999px; top:-9999px; width:100%}
 .why-tab:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.why-tab.active {display:block}
+.why-tab.active {position:relative; left:auto; top:auto}
 .why-tab-title {float:left; width:250px; font-weight:bold; text-transform:uppercase; font-size:25px; line-height:25px; margin:55px 0 0 0}
 .why-tab-text {margin:0 0 0 290px; font-size:15px; padding:57px 0 0 0}
+.why-tab-text-wrap {max-height:180px; position:relative; overflow:hidden}
+.why-tab-text.open .why-tab-text-wrap {max-height:none; overflow:auto}
 .why-tab-text p {margin:0 0 20px 0}
-.why-tab-text .btn-2 {width:170px; height:40px; border-radius:3px; border-color:#ccc; font-size:12px; line-height:38px; font-weight:normal; margin:33px 0 0 0}
+.why-tab-text p:last-child {margin:0}
+.why-tab-text .btn-2 {display:none; width:170px; height:40px; border-radius:3px; border-color:#ccc; font-size:12px; line-height:38px; font-weight:normal; margin:33px 0 0 0}
+.why-tab-text.why-tab-text-with-link .btn-2 {display:block}
+.why-tab-text .btn-2:hover {text-decoration:none; border-color:#c3c4c4}
+.why-tab-text .btn-2:active {text-decoration:none; border-color:#000}
+.why-tab-more-text-2 {display:none}
+.why-tab-text.open .why-tab-more-text-1 {display:none}
+.why-tab-text.open .why-tab-more-text-2 {display:inline}
 
 @media (max-width:1199px) {
     .why-tab {margin:50px 0 0 0; padding:0 30px 130px 30px}
