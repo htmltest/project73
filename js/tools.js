@@ -28,7 +28,8 @@ $(document).ready(function() {
         },
         closeEffect: 'none',
         closeSpeed: 0,
-        beforeShow: function() { this.title += '<div class="fancybox-title-date">' + $(this.element).data('date') + '</div><a href="' + $(this.element).attr('href') + '" download class="fancybox-download-link"></a>'}
+        beforeShow: function() { this.title += '<div class="fancybox-title-date">' + $(this.element).data('date') + '</div><a href="' + $(this.element).attr('href') + '" download class="fancybox-download-link"></a>'},
+        afterClose: function() { $('.wrapper').css('margin-top', 0); $(window).scrollTop($('html').data('scrollTop')); }
     });
 
     $.validator.addMethod('maskPhone',
@@ -165,6 +166,107 @@ $(document).ready(function() {
         });
     });
 
+    $('.plan').each(function() {
+        var planWidthSrc    = Number($('.plan-scheme').attr('width'));
+        var planHeightSrc   = Number($('.plan-scheme').attr('height'));
+
+        $(window).on('load resize', function() {
+            var curWidth = $('.plan').width();
+            curHeight = curWidth * planHeightSrc / planWidthSrc;
+            $('.plan').css({'height': curHeight});
+            $('.plan-bg').css({'left': 0, 'width': curWidth, 'height': curHeight});
+            $('.plan-scheme').css({'width': curWidth, 'height': curHeight});
+
+            $('.main-scheme-point').each(function() {
+                var curWindow = $(this);
+                curWindow.css({'display': 'none', 'left': Number(curWindow.data('left')) * curWidth / planWidthSrc, 'top': Number(curWindow.data('top')) * curWidth / planWidthSrc});
+            });
+        });
+
+        var planTimer = null;
+
+        $('body').on('mouseover', '.plan-scheme path.object', function(e) {
+            if ($('.plan').width() > 1199) {
+                window.clearTimeout(planTimer);
+                planTimer = null;
+                var curArea = $(this);
+                var curIndex = $('.plan-scheme path.object').index(curArea);
+
+                $('.main-scheme-point').css({'display': 'none'});
+                var curWindow = $('.main-scheme-point').eq(curIndex);
+                if (curWindow.length > 0) {
+                    curWindow.css({'display': 'block'});
+                    var curPlan = $('.plan');
+                    if (curWindow.offset().left + curWindow.find('.main-scheme-point-content').outerWidth() > curPlan.offset().left + curPlan.width()) {
+                        curWindow.addClass('right');
+                    }
+                }
+
+                $('.plan-scheme path.object').removeClass('hover');
+                $('.plan-scheme path.object').eq(curIndex).addClass('hover');
+            }
+        });
+
+        $('body').on('mouseout', '.plan-scheme path.object', function(e) {
+            if ($('.plan').width() > 1199) {
+                window.clearTimeout(planTimer);
+                planTimer = null;
+                planTimer = window.setTimeout(function() {
+                    $('.plan-scheme path.object').removeClass('hover');
+                    $('.main-scheme-point').css({'display': 'none'});
+                }, 200);
+            }
+        });
+
+        $('body').on('mouseover', '.main-scheme-point', function(e) {
+            if ($('.plan').width() > 1199) {
+                window.clearTimeout(planTimer);
+                planTimer = null;
+            }
+        });
+
+        $('body').on('mouseout', '.main-scheme-point', function(e) {
+            if ($('.plan').width() > 1199) {
+                window.clearTimeout(planTimer);
+                planTimer = null;
+                planTimer = window.setTimeout(function() {
+                    $('.plan-scheme path.object').removeClass('hover');
+                    $('.main-scheme-point').css({'display': 'none'});
+                }, 200);
+            }
+        });
+
+        $('.plan-scheme path.object').click(function(e) {
+            if ($('.plan').width() < 1200) {
+                var curArea = $(this);
+                var curIndex = $('.plan-scheme path.object').index(curArea);
+
+                $('.main-scheme-point').css({'display': 'none'});
+                var curWindow = $('.main-scheme-point').eq(curIndex);
+                if (curWindow.length > 0) {
+                    curWindow.css({'display': 'block'});
+                }
+
+                $('.plan-scheme path.object').removeClass('hover');
+                $('.plan-scheme path.object').eq(curIndex).addClass('hover');
+            }
+        });
+
+        $('body').on('click', '.main-scheme-point-close', function(e) {
+            $('.plan-scheme path.object').removeClass('hover');
+            $('.main-scheme-point').css({'display': 'none'});
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.plan').length == 0) {
+                $('.plan-scheme path.object').removeClass('hover');
+                $('.main-scheme-point').css({'display': 'none'});
+            }
+        });
+
+    });
+
 });
 
 function updateTimer() {
@@ -207,36 +309,6 @@ function updateTimer() {
 
     setTimeout(updateTimer, 1000);
 }
-
-$(window).on('load resize', function() {
-    $('.main-scheme').each(function() {
-        var curScheme = $(this);
-        var curWidth = curScheme.width();
-        var originalWidth = curScheme.find('.main-scheme-img').data('width');
-        var curScale = curWidth / originalWidth;
-        curScheme.find('.main-scheme-point').each(function() {
-            var curPoint = $(this);
-            var curLeft = Number(curPoint.css('left').replace('px', ''));
-            var curTop = Number(curPoint.css('top').replace('px', ''));
-            curPoint.css({'margin-left': curLeft * curScale - curLeft, 'margin-top': curTop * curScale - curTop});
-            if (curWidth - (curLeft * curScale) < 585) {
-                curPoint.addClass('right');
-            } else {
-                curPoint.removeClass('right');
-            }
-            if (curWidth < 1200) {
-                if (curWidth - (curLeft * curScale) < 215) {
-                    curPoint.find('.main-scheme-point-content').css({'margin-left': (-215 - (215 - (curWidth- (curLeft * curScale)))) + 'px'});
-                }
-                if (curLeft * curScale < 215) {
-                    curPoint.find('.main-scheme-point-content').css({'margin-left': (-215 + (215 - curLeft * curScale)) + 'px'});
-                }
-            } else {
-                curPoint.find('.main-scheme-point-content').removeAttr('style');
-            }
-        });
-    });
-});
 
 $(window).on('load resize', function() {
     if ($(window).width() < 1200) {

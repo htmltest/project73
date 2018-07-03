@@ -110,16 +110,40 @@
                 </div>
                 <!-- bg END -->
 
-                <!-- main scheme -->
-                <div class="main-scheme">
-                    <img src="images/main-scheme.png" alt="" class="main-scheme-img" data-width="1600" />
+                <!-- plan -->
+                <div class="plan">
+                    <div class="plan-bg">
+                        <svg class="plan-scheme" width="1600" height="825" viewBox="0 0 1600 825">
+                            <symbol id="plan-borders">
+                                <g stroke="gray" stroke-width="0" fill="white">
+                                    <path d="M 0,61,1599,0,1599,824,0,775 Z"></path>
+                                </g>
+                            </symbol>
+
+                            <mask id="plan-borders-mask">
+                                <use xlink:href="#plan-borders" />
+                            </mask>
+
+                            <symbol id="plan-image">
+                                <image xlink:href="images/main-scheme.jpg" width="1600" height="825" />
+                            </symbol>
+
+                            <g mask="url(#plan-borders-mask)">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plan-image"></use>
+                            </g>
+
+                            <path class="object" d="M 669,171,925,118,1563,387,1556,435,1241,549,1240,504 Z"></path>
+                            <path class="object" d="M 297,276,298,238,620,181,1175,530,1173,573,735,742 Z"></path>
+                            <path class="object" d="M 296,277,732,743,637,757,235,276 Z"></path>
+                            <path class="object" d="M 143,289,341,578,31,664,-1,571,-1,318 Z"></path>
+                        </svg>
+                    </div>
                     <div class="main-scheme-title">Карта складского комплекса</div>
 
                     <!-- main scheme point -->
-                    <div class="main-scheme-point" style="left:1018px; top:192px">
-                        <div class="main-scheme-point-title">1</div>
+                    <div class="main-scheme-point" data-left="1018" data-top="192">
                         <div class="main-scheme-point-content">
-                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО» 1</div>
                             <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
                             <div class="main-scheme-point-info">
                                 <div class="main-scheme-point-info-row">
@@ -167,15 +191,15 @@
                                     <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
                                 </div>
                             </div>
+                            <a href="#" class="main-scheme-point-close"></a>
                         </div>
                     </div>
                     <!-- main scheme point END -->
 
                     <!-- main scheme point -->
-                    <div class="main-scheme-point" style="left:800px; top:345px">
-                        <div class="main-scheme-point-title">2</div>
+                    <div class="main-scheme-point" data-left="800" data-top="345">
                         <div class="main-scheme-point-content">
-                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО» 2</div>
                             <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
                             <div class="main-scheme-point-info">
                                 <div class="main-scheme-point-info-row">
@@ -223,15 +247,15 @@
                                     <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
                                 </div>
                             </div>
+                            <a href="#" class="main-scheme-point-close"></a>
                         </div>
                     </div>
                     <!-- main scheme point END -->
 
                     <!-- main scheme point -->
-                    <div class="main-scheme-point" style="left:368px; top:415px">
-                        <div class="main-scheme-point-title">3</div>
+                    <div class="main-scheme-point" data-left="368" data-top="415">
                         <div class="main-scheme-point-content">
-                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-name">Стоянка</div>
                             <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
                             <div class="main-scheme-point-info">
                                 <div class="main-scheme-point-info-row">
@@ -279,15 +303,15 @@
                                     <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
                                 </div>
                             </div>
+                            <a href="#" class="main-scheme-point-close"></a>
                         </div>
                     </div>
                     <!-- main scheme point END -->
 
                     <!-- main scheme point -->
-                    <div class="main-scheme-point" style="left:152px; top:515px">
-                        <div class="main-scheme-point-title">4</div>
+                    <div class="main-scheme-point" data-left="152" data-top="515">
                         <div class="main-scheme-point-content">
-                            <div class="main-scheme-point-name">Складской комплекс «СВИБЛОВО»</div>
+                            <div class="main-scheme-point-name">Контейнерная площадка</div>
                             <div class="main-scheme-point-size"><strong>210 000</strong> м&sup2;</div>
                             <div class="main-scheme-point-info">
                                 <div class="main-scheme-point-info-row">
@@ -335,11 +359,12 @@
                                     <div class="main-scheme-point-info-row-value">система видеонаблюдения, система  контроля доступа, доступ на территорию - 24 ч.</div>
                                 </div>
                             </div>
+                            <a href="#" class="main-scheme-point-close"></a>
                         </div>
                     </div>
                     <!-- main scheme point END -->
                 </div>
-                <!-- main scheme END -->
+                <!-- plan END -->
 
                 <div class="main-services-menu">
                     <div class="main-services-menu-inner">
