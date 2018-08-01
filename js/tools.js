@@ -180,6 +180,12 @@ $(document).ready(function() {
         var planHeightSrc   = Number($('.plan-scheme').attr('height'));
 
         $(window).on('load resize', function() {
+            resizePlan();
+        });
+        
+        resizePlan();
+        
+        function resizePlan() {
             var curWidth = $('.plan').width();
             curHeight = curWidth * planHeightSrc / planWidthSrc;
             $('.plan').css({'height': curHeight});
@@ -190,7 +196,7 @@ $(document).ready(function() {
                 var curWindow = $(this);
                 curWindow.css({'display': 'none', 'left': Number(curWindow.data('left')) * curWidth / planWidthSrc, 'top': Number(curWindow.data('top')) * curWidth / planWidthSrc});
             });
-        });
+        }
 
         var planTimer = null;
 
