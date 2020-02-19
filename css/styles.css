@@ -168,6 +168,9 @@ form {margin:40px 0; padding:0}
 
 ::-ms-clear {display:none}
 
+.form-captcha {margin:10px 0}
+.form-captcha label.error {display:block; color:#f02a2a; margin:8px 0 0 0}
+
 .form-field {margin:30px 0}
 
 .form-file {margin:20px 0}
@@ -578,6 +581,7 @@ a.header-phone-window-link {font:11px/15px DINProMedium, sans-serif; color:#fff;
 .how-form-fields {float:left; width:570px; padding:19px 0 0 0}
 .how-form-field {float:left; width:180px; margin:0 10px 0 0}
 .how-form-field .form-input {margin-top:-8px}
+.how-form-row .form-input {float:left; width:100%}
 .how-form-field+.how-form-field+.how-form-field {float:right; margin:0}
 .how-form-file {float:right; width:350px; padding:42px 0 0 0}
 .how-form-file .form-file {padding:6px 0 0 0}
